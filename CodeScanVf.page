@@ -1,0 +1,9 @@
+<apex:page controller="codescan">
+    <script>
+    function checkval(){
+        if('{!name}' == ''){
+            alert('Enter Value');
+        }
+    }
+    </script>
+</apex:page>
