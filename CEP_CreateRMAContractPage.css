@@ -1,0 +1,10 @@
+.THIS .custTable {
+    word-wrap: break-word;
+    max-width: 20rem !important;
+    white-space: pre-line !important;
+}
+
+.THIS section.slds-modal {
+    position: fixed !important;
+    z-index: 9001 !important;
+}

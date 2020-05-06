@@ -1,0 +1,5 @@
+.THIS .custTable {
+        word-wrap: break-word;
+        max-width: 20rem !important;
+        white-space: pre-line !important;
+    }
