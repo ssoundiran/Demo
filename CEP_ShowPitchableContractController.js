@@ -17,8 +17,8 @@
             
         });       
         $A.enqueueAction(action); 
-        var action = component.get("c.checkPitchableContractmsg");        
-        action.setCallback(this, function (response) {
+        var actionarticle = component.get("c.checkPitchableContractmsg");        
+        actionarticle.setCallback(this, function (response) {
             var state = response.getState();
             console.log(response.getReturnValue());
             if (state === "SUCCESS") {
@@ -27,7 +27,7 @@
 		      }
             
         });       
-        $A.enqueueAction(action);
+        $A.enqueueAction(actionarticle);
 	}
    
 })
