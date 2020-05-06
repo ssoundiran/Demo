@@ -1,0 +1,40 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" controller="CEP_ShowPitchableContractctrl">
+    <aura:attribute name="msg" type="String" default=""/>
+    <aura:attribute name="displayComp" type="boolean" default="true"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:registerEvent name="cmpEvent" type="c:CEP_PitchableContractsEvent"/>
+    <aura:attribute name="pitchablemsg" type="String" />
+    <aura:if isTrue="{!and(v.msg != '',v.displayComp)}">        
+        <article class="slds-card">
+            <div class="slds-card__header slds-grid">
+                <header class="slds-media slds-media_center slds-has-flexi-truncate blink-bg">
+                    <div class="slds-media__figure">        
+                        <center><lightning:icon iconName="action:announcement" alternativeText="announcement" title="Announcement" size="x-small" /></center>
+                    </div>
+                </header>
+            </div>
+            <div class="slds-card__body slds-card__body_inner">  
+                <h1>{!v.msg}</h1>
+                <a href="{!v.pitchablemsg}" target="_blank" >Click for More</a>
+            </div>
+        </article>
+        <br/>
+    </aura:if>
+    
+    <aura:html tag="style">
+        .blink-bg{
+            color: #fff;
+            padding: 10px;
+            display: inline-block;
+            border-radius: 5px;
+            animation: blinkingBackground 2s infinite;
+        }
+        @keyframes blinkingBackground{
+            0%		{ background-color: #fe8f60;}
+            25%		{ background-color: #FFFFFF;}
+            50%		{ background-color: #fe8f60;}
+            75%		{ background-color: #FFFFFF;}
+            100%	{ background-color: #fe8f60;}
+        } 
+    </aura:html>
+</aura:component>

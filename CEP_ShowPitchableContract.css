@@ -1,0 +1,9 @@
+.THIS.slds-box {
+    border: 4px #edd328;;
+}
+.THIS use{
+        fill: white;
+}
+.THIS.slds-box {
+    border: 2px solid var(--lwc-colorBackgroundWarning,rgb(255, 183, 93));
+}
